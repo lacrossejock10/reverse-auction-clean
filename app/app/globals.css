@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+.text-primary {
+  color: #0070f3;
+}
+
+.bg-primary {
+  background-color: #0070f3;
+}
+
+.border-primary {
+  border-color: #0070f3;
+}
+
+.text-secondary {
+  color: #666666;
+}
+
+.bg-secondary {
+  background-color: #666666;
+}
+
+.border-secondary {
+  border-color: #666666;
+}
+
+.hover\:bg-primary:hover {
+  background-color: #0070f3;
+}
+
+.hover\:bg-secondary:hover {
+  background-color: #666666;
+}
+
+.hover\:text-primary:hover {
+  color: #0070f3;
+}
+
+.hover\:text-white:hover {
+  color: white;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-opacity-90;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-opacity-90;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm border overflow-hidden;
+  }
+
+  .card-header {
+    @apply p-4 border-b;
+  }
+
+  .card-content {
+    @apply p-4;
+  }
+
+  .input {
+    @apply w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+}
